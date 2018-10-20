@@ -1,4 +1,56 @@
 {% extends 'base.html' %}
 {% block content %}
+<div id="scoped-content">
+<style>
+	.sender-message {
+		border: 1px solid green;
+		display: flex;
+	}
+	.reply-message {
+		border: 1px solid orange;
+		display: flex;
+	}
+	div {
+		margin: 10px;
+	}
+	.avatar {
+		flex-shrink: 0;
+		display: inline;
+		height: 50px;
+		width: 50px;
+		border-radius: 50%;
+		background: red;
+		border: 1px solid black;
+		margin-left: 5px;
+	}
+	.avatar-1 {
+		background: rebeccapurple;
+	}
+	.message {
+		margin-left: 15px;
+	}
+	.chat-app {
+		text-align: center;
+	}
+</style>
+</div>
 	<h2>Help Out</h2>
+	<div class="sender-message">
+			<p class="avatar">&nbsp;</p>
+			<p class="message">Hey I found my son's old protractor in his closet. He went to college out of state and won't need it anymore. You can have it. Where can I drop it off? Or you can pick it up?</p>
+	</div>
+	<div class="reply-message">
+			<p class="avatar avatar-1">&nbsp;</p>
+			<p class="message">You can drop it off at the front office of the school. Thank's so much. The kids appreciate it.</p>
+	</div>
+
+	<div class="sender-message">
+			<p class="avatar">&nbsp;</p>
+			<p class="message">No problem...</p>
+	</div>
+
+	<div class="chat-app">
+			<input></input>
+			<button>SEND CHAT</button>
+	</div>
 {% endblock %}

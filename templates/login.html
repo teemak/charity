@@ -1,4 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
+<div id="scoped-content">
+<style>
+	form {
+		display: flex;
+		flex-direction: row;
+	}
+</style>
+</div>
 	<h2>LOGIN</h2>
+	<form>
+			<label>Username</label>
+			<input type="text"></input>
+			<button>LOGIN</button>
+	</form>
 {% endblock %}
