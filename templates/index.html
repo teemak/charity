@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block content %}
+<div id="scoped-content">
+	<style>
+		ul {
+			list-style: none;
+		}
+		.card {
+			border: 1px solid black;
+			margin: 15px;
+			border-radius: 10px;
+		}
+		.cta-row {
+			display: flex;
+		}
+		button {
+			border: 1px solid white;
+			border-radius: 10px;
+			background: linear-gradient(#ff8100, #ff410d);
+			padding: 5px;
+		}
+	</style>
+</div>
+	<h2>List all charities</h2>
+
+	<ul>
+			<li class="card">
+				<h3>Math Teacher needs some protractors for math class.</h3>
+				<p>I'm a teacher at Palm Beach Middle School and two students are in need of a
+				protracter. If don't use your protractor or have an extra one please contact me.
+				</p>
+				<div class="cta-row">
+						<a href="{{ url_for('help_out') }}"><button>Help Out</button></a>
+						<a href="{{ url_for('more_info') }}"><button>MORE INFO</button></a>
+				</div>
+			</li>
+			<li class="card">
+				<h3>Need volunteers for local food Shelter</h3>
+				<p>One of our trucks broke down and can't pick up food from the local restaurant.
+				If you have a spare truck that can hold three crates of vegetables and 10 trays of 
+				food please contact me.
+				</p>
+				<div class="cta-row">
+					<button>Help Out</button><button>MORE INFO</button>
+				</div>
+			</li>
+			<li class="card">
+				<h3>Anyone need volunteer hours for school?</h3>
+				<p>City of Parkland can use your help if you are looking to volunteer. The local
+				5K race will be held near Pine Trails Park. We need help signing up runners and
+				passing out water to the runners. If available contact me...
+				</p>
+				<div class="cta-row">
+					<button>Help Out</button><button>MORE INFO</button>
+				</div>
+			</li>
+	</ul>
+	
+{% endblock %}

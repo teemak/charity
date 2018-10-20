@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+	<title>Team Diesel</title>
+	<link href="https://fonts.googleapis.com/css?family=Nunito|Raleway" rel="stylesheet">
+<style>
+	body {
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+		font-family: 'Nunito';
+	}
+	nav {
+		display: flex;
+		justify-content: center;
+		border-bottom: 1px solid black;
+	}
+	nav * {
+		margin: 10px;
+	}
+</style>
+</head>
+
+<body>
+	<nav>
+			<p><a href="{{ url_for('index') }}">HOME</a></p>
+			<p><a href="{{ url_for('login') }}">LOGIN</a></p>
+			<p><a href="{{ url_for('account') }}">ACCOUNT</a></p>
+	</nav>
+	{% block content%}
+	{% endblock %}
+</body>
